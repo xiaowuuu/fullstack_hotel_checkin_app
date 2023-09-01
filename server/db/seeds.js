@@ -10,16 +10,16 @@ db.bookings.insertMany([
     {
         guest_name: "Patrick",
         guest_email:"patrick123@gmail.com",
-        checkin_status:True
+        checkin_status: true
     },
     {
         guest_name: "Marc",
         guest_email:"marc123@gmail.com",
-        checkin_status:True
+        checkin_status: true
     },
     {
         guest_name: "Tom & Jerry",
         guest_email:"tomjerry@gmail.com",
-        checkin_status: False
+        checkin_status: false
     }
 ]);
