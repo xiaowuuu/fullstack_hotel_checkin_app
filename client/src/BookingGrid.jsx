@@ -11,6 +11,8 @@ const BookingGrid = ({bookings}) => {
     return (
         <>
         {bookingList}
+        <h5>Checked-in: &#x1F7E9;</h5>
+        <h5>Pending: &#x1F7E7;</h5>
         </>
     )
 }

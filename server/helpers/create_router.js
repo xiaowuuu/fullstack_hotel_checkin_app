@@ -15,6 +15,32 @@ const createRouter = function (collection) {
                 res.json({ status: 500, error: err})
             });
     });
+
+    router.get("/:id", (req, res)=> {
+        const someId = req.params.id;
+        collection.findOne({_id: ObjectID(someId)})
+        .then((doc)=> {
+            res.json(doc);
+        }).catch(
+            (err) => {
+                res.status(500);
+                res.json({ status: 500, error: err});
+            }
+        )
+    })
+
+    router.post("/", (req, res) => {
+        const newData = req.body;
+        collection.insertOne(newData)
+        .then((doc) => {
+            res.json(doc.ops[0]);
+        }).catch(
+            (err) => {
+                res.status(500);
+                res.json({status: 500, error: err});
+            }
+        )
+    })
     return router;
 };
 
