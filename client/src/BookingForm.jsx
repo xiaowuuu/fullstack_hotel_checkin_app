@@ -5,9 +5,9 @@ const BookingForm = ({addBooking}) => {
     const [formData, setFormData] = useState({});
     const handleSubmit = (e) => {
         e.preventDefault();
-        formData["guest_name"] = formData.name;
-        formData["guest_email"] = formData.email;
-        formData["checkin_status"] = formData.status;
+        formData["bookings"] = {};
+        // formData["guest_email"] = formData.email;
+        // formData["checkin_status"] = formData.status;
         postBooking(formData).then((data) => {
             addBooking(data);
         });
@@ -20,16 +20,16 @@ const BookingForm = ({addBooking}) => {
     return (
         <>
         <h3>New Booking</h3>
-        <form onSubmit={handleSubmit} method="post">
-            <label htmlFor="name">Guest Name: </label>
-            <input type="text" onChange={onChange} id="name" v-model="name" required/>
-            <label htmlFor="email">Email: </label>
-            <input type="email" onChange={onChange} id="email" required/>
-            <label htmlFor="status">Check-in Status: </label>
-            <label htmlFor="checkedin">Checked-in</label>
-            <input onChange={onChange} type="radio" id="checkedin" name="status" value="checked-in"/>
-            <label htmlFor="pending">Pending</label>
-            <input onChange={onChange} type="radio" id="pending" name="status" value="pending"/>
+        <form onSubmit={handleSubmit} method="post" id="new_booking_form">
+            <label htmlFor="guest_name">Guest Name: </label>
+            <input type="text" onChange={onChange} id="guest_name" v-model="guest_name" required/>
+            <label htmlFor="guest_email">Email: </label>
+            <input type="email" onChange={onChange} id="guest_email" required/>
+            <label htmlFor="checkin">Check-in Status: </label>
+            <label htmlFor="checkin">Checked-in</label>
+            <input onChange={onChange} type="radio" id="checkin_status" name="status" value="true"/>
+            <label htmlFor="checkin">Pending</label>
+            <input onChange={onChange} type="radio" id="checkin_status" name="status" value=""/>
             <input type="submit" value="Save" id="save"></input>
         </form>
         </>

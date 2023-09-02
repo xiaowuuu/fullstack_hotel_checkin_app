@@ -31,6 +31,7 @@ const createRouter = function (collection) {
 
     router.post("/", (req, res) => {
         const newData = req.body;
+        newData.checkin_status = Boolean(newData.checkin_status);
         collection.insertOne(newData)
         .then((doc) => {
             res.json(doc.ops[0]);
