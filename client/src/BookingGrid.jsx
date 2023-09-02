@@ -1,10 +1,10 @@
 import OneBooking from "./OneBooking";
 
-const BookingGrid = ({bookings}) => {
+const BookingGrid = ({bookings, deleteBooking}) => {
     const bookingList = bookings.map((booking) => {
         return (
             <>
-            <OneBooking booking={booking} key={booking._id} />
+            <OneBooking booking={booking} key={booking._id} deleteBooking={deleteBooking} />
             </>
         )
     });

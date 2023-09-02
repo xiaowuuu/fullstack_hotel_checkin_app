@@ -1,4 +1,4 @@
-const OneBooking = ({booking}) => {
+const OneBooking = ({booking, deleteBooking}) => {
     
     return (
         <div>
@@ -6,6 +6,7 @@ const OneBooking = ({booking}) => {
         <h3>Email: {booking.guest_email}</h3>
         {/* ternary operator */}
         <h3>Check-in Status: {booking.checkin_status == true ? "\uD83D\uDFE9" : "\uD83D\uDFE7"}</h3>
+        <button onClick={()=>deleteBooking(booking._id)}>Delete</button>
         </div>
         
     )
