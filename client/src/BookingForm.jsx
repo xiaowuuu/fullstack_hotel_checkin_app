@@ -2,9 +2,11 @@ import { useState } from "react";
 import { postBooking } from "./BookingService";
 
 const BookingForm = ({addBooking}) => {
+    
     const [formData, setFormData] = useState({});
     const handleSubmit = (e) => {
         e.preventDefault();
+        e.target.reset(); //reset when submit the form
         formData["bookings"] = {};
         // formData["guest_email"] = formData.email;
         // formData["checkin_status"] = formData.status;

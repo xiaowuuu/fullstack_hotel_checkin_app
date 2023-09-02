@@ -23,7 +23,7 @@ function App() {
   return (
     
     <div className='App'>
-      <h2>Booking System</h2>
+      <h1>White Lotus Hotel Booking System</h1>
       <BookingForm addBooking={addBooking} />
       <BookingGrid bookings={bookings}/>
     </div>
