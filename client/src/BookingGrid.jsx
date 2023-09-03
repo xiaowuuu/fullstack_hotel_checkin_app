@@ -1,23 +1,32 @@
 import OneBooking from "./OneBooking";
 import './App.css';
+import styled from 'styled-components';
 
-const BookingGrid = ({bookings, deleteBooking}) => {
+const BookingList = styled.section`
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 43px;
+`
+
+const BookingGrid = ({ bookings, deleteBooking }) => {
     const bookingList = bookings.map((booking) => {
         return (
             <>
-            <OneBooking booking={booking} key={booking._id} deleteBooking={deleteBooking} />
+                <OneBooking booking={booking} key={booking._id} deleteBooking={deleteBooking} />
             </>
         )
     });
     return (
         <>
-        <div className="booklingList">
-        {bookingList}
-        </div>
-        <h5>Checked-in: &#x1F7E9;</h5>
-        <h5>Pending: &#x1F7E7;</h5>
-        
+            <BookingList>
+                {bookingList}
+            </BookingList>
+            <h5>Checked-in: &#x1F7E9;</h5>
+            <h5>Pending: &#x1F7E7;</h5>
         </>
+
     )
 }
 
