@@ -1,3 +1,5 @@
+import './App.css';
+
 const OneBooking = ({booking, deleteBooking}) => {
     
     return (

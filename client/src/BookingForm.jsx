@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { postBooking } from "./BookingService";
+import './App.css';
 
-const BookingForm = ({addBooking}) => {
-    
+const BookingForm = ({ addBooking }) => {
+
     const [formData, setFormData] = useState({});
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,19 +22,28 @@ const BookingForm = ({addBooking}) => {
 
     return (
         <>
-        <h3>New Booking</h3>
-        <form onSubmit={handleSubmit} method="post" id="new_booking_form">
-            <label htmlFor="guest_name">Guest Name: </label>
-            <input type="text" onChange={onChange} id="guest_name" v-model="guest_name" required/>
-            <label htmlFor="guest_email">Email: </label>
-            <input type="email" onChange={onChange} id="guest_email" required/>
-            <label htmlFor="checkin">Check-in Status: </label>
-            <label htmlFor="checkin">Checked-in</label>
-            <input onChange={onChange} type="radio" id="checkin_status" name="status" value="true"/>
-            <label htmlFor="checkin">Pending</label>
-            <input onChange={onChange} type="radio" id="checkin_status" name="status" value=""/>
-            <input type="submit" value="Save" id="save"></input>
-        </form>
+            <div className="newBookingForm">
+                <form onSubmit={handleSubmit} method="post" id="new_booking_form">
+                    <div className="form-name">
+                        <label htmlFor="guest_name">Guest Name: </label>
+                        <input type="text" onChange={onChange} id="guest_name" v-model="guest_name" required />
+                    </div>
+                    <div className="form-email">
+                        <label htmlFor="guest_email">Email: </label>
+                        <input type="email" onChange={onChange} id="guest_email" required />
+                    </div>
+                    <div className="form-checkin">
+                        <label htmlFor="checkin">Check-in Status: </label>
+                    </div>
+                    <div className="form-checkin">
+                        <label htmlFor="checkin">Checked-in</label>
+                        <input onChange={onChange} type="radio" id="checkin_status" name="status" value="true" />
+                        <label htmlFor="checkin">Pending</label>
+                        <input onChange={onChange} type="radio" id="checkin_status" name="status" value="" />
+                    </div>
+                    <input type="submit" value="Save" id="save"></input>
+                </form>
+            </div>
         </>
     )
 }

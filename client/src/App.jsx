@@ -6,6 +6,7 @@ import BookingForm from './BookingForm';
 
 function App() {
   const [bookings, setBookings] = useState([]);
+  const image= {url: 'https://i.travelapi.com/lodging/1000000/60000/54200/54173/b04783ff_z.jpg'}
   useEffect(() => {
     getBookings()
     .then((data) => {
@@ -31,7 +32,8 @@ function App() {
   return (
     
     <div className='App'>
-      <h1>White Lotus Hotel Booking System</h1>
+      <img src="https://i.travelapi.com/lodging/1000000/60000/54200/54173/f7e5ef90_z.jpg" />
+      <h1 className='banner'>White Lotus Hotel Booking System</h1>
       <BookingForm addBooking={addBooking} />
       <BookingGrid bookings={bookings} deleteBooking={deleteBooking}/>
     </div>
