@@ -6,8 +6,8 @@ const BookingList = styled.section`
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 43px;
+    margin: 5px;
+    
 `
 
 const BookingGrid = ({ bookings, deleteBooking }) => {

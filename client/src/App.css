@@ -13,45 +13,20 @@ img {
 }
 
 form {
-  display:flex;
+  display: flex;
   /* flex-direction: row; */
   align-items: center;
-  text-align:start;
+  text-align: start;
   align-content: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.form-name {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.form-email {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.form-checkin {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: justify;
-  flex-shrink: 0;
-}
-
-/* .checkin_status {
-  flex-direction:row;
-} */
 
 #save {
   background: #FACE34;
   border: none;
+  border-radius: 5px;
   padding: 0.5rem 1rem;
   font-weight: bolder;
 }
-

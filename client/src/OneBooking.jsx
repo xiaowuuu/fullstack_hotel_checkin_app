@@ -8,6 +8,7 @@ const BookingCard = styled.section`
     border: 1px solid #D9D9D9;
     background: #FFF;
     box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
 `
 
 

@@ -25,7 +25,6 @@ const Label = styled.h3 `
     font-weight:bold;
 `
 
-
 const FormCheckin = styled.section `
     display: flex;
 align-items: center;
