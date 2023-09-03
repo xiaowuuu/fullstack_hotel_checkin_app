@@ -1,24 +1,20 @@
-img {
+
+.bg-img {
+  background: url('https://i.travelapi.com/lodging/1000000/60000/54200/54173/f7e5ef90_z.jpg'), lightgray 50% / cover no-repeat;
   width: 100%;
-  height: 640px;
+  height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-.banner {
-  /* color: #FFF; */
-  font-family: Inter;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-}
 
 form {
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
-  text-align: start;
   align-content: center;
-  gap: 12px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 
@@ -27,6 +23,16 @@ form {
   background: #FACE34;
   border: none;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.2rem;
   font-weight: bolder;
+  font-size: large;
+}
+
+#save:hover {
+  background-color: #f8bc30;
+}
+
+h5 {
+    display:inline-block;
+    flex-direction: row;
 }
