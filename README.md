@@ -17,7 +17,7 @@ This project is a full-stack web application that allows a hotel to manage booki
 - **Add New Booking**: Hotel managers can add new bookings by providing the following information:
   - Guest Name
   - Guest Email Address
-  - Checked-in Status
+  - Check-in Status
 
 - **Real-time Updates**: When a new booking is added, the page updates instantly without requiring a page refresh, providing a seamless user experience.
 

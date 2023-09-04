@@ -23,8 +23,8 @@ const BookingGrid = ({ bookings, deleteBooking }) => {
             <BookingList>
                 {bookingList}
             </BookingList>
-            <h5>Checked-in: &#x1F7E9;</h5>
-            <h5>Pending: &#x1F7E7;</h5>
+            <h5>Check-in: &#x1F7E9;</h5>
+            <h5>Check-out: &#x1F7E7;</h5>
         </>
 
     )

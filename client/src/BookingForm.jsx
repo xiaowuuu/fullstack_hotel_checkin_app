@@ -85,9 +85,9 @@ const BookingForm = ({ addBooking }) => {
                         <FormCheckin>
                             <Label htmlFor="checkin">Check-in Status: </Label>
                             <RadioOptions>
-                                <label htmlFor="checkin">Checked-in</label>
+                                <label htmlFor="checkin">Check-in</label>
                                 <input onChange={onChange} type="radio" id="checkin_status" name="status" value="true" />
-                                <label htmlFor="checkin">Pending</label>
+                                <label htmlFor="checkin">Check-out</label>
                                 <input onChange={onChange} type="radio" id="checkin_status" name="status" value="" />
                             </RadioOptions>
                         </FormCheckin>
