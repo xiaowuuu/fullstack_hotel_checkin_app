@@ -40,3 +40,31 @@ This project is a full-stack web application that allows a hotel to manage booki
 To run this project locally, follow these steps:
 
 1. **Clone the repository:**
+   
+
+
+2. **Navigate to the project directory:**
+
+cd hotel-booking-app
+
+3. **Install dependencies for both the front-end and back-end:**
+
+cd client
+npm install
+cd server
+npm install
+
+4. **Set up the MongoDB database:**
+
+- Create a MongoDB Atlas account or set up a local MongoDB instance.
+- Configure your database connection in the server configuration.
+
+5. **Start the development server for both the front-end and back-end:**
+
+cd client
+npm run dev
+
+cd server
+npm run server:dev
+
+Open your web browser and navigate to `http://localhost:3000` to access the application.
