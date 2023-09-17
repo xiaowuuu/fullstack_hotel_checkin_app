@@ -40,8 +40,6 @@ This project is a full-stack web application that allows a hotel to manage booki
 To run this project locally, follow these steps:
 
 1. **Clone the repository:**
-   
-
 
 2. **Navigate to the project directory:**
 
