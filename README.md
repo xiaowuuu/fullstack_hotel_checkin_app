@@ -65,4 +65,4 @@ npm run dev
 cd server
 npm run server:dev
 
-Open your web browser and navigate to `http://localhost:3000` to access the application.
+Open your web browser and navigate to `http://localhost:3000` to access the application
